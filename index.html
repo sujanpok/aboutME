@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222; /* Dark background color */
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #fff; /* Text color */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            position: relative;
+            animation: neon-glow 1s ease-in-out infinite alternate;
+        }
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+            background-size: 200% 200%;
+            opacity: 0.8;
+            z-index: -1;
+            animation: gradient-shift 3s linear infinite;
+        }
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff00ff;
+            }
+        }
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>We're Coming Soon</h1>
+            <p>Our website is under construction. We'll be here soon with our new awesome site.</p>
+        </div>
+    </div>
+</body>
+</html>
